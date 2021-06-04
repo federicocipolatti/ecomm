@@ -11,6 +11,8 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -50,16 +52,32 @@ export default function MenuAppBar() {
           label={auth ? 'Logout' : 'Login'}
         />
       </FormGroup>
-      <AppBar position="static">
+      <AppBar position="static" style={{backgroundColor: "lightblue",color: "black"}}>
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            Photos
+            <img src=""/>logo(a definir)
           </Typography>
           {auth && (
             <div>
+              <AddShoppingCartIcon
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                color="inherit"
+              >
+                <AccountCircle />
+              </AddShoppingCartIcon>
+              <NotificationsActiveIcon
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                color="inherit"
+              >
+                <AccountCircle />
+              </NotificationsActiveIcon>
               <IconButton
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
@@ -84,8 +102,8 @@ export default function MenuAppBar() {
                 open={open}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
+                <MenuItem onClick={handleClose}>Mi Perfil</MenuItem>
+                <MenuItem onClick={handleClose}>Configuración</MenuItem>
               </Menu>
             </div>
           )}
