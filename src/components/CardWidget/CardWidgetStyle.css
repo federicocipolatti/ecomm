@@ -1,8 +1,8 @@
 .CardWidget{
     color: black;
-    align-items: center;
     display: flex;
-    justify-content: end;
+    flex-direction: row-reverse;
+    align-content: flex-start;
 }
 
 .CardWidget:hover{

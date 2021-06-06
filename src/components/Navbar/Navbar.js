@@ -1,42 +1,40 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import { CardWidget } from './CardWidget';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import './Navbar.css';
+import { CardWidget } from '../CardWidget/CardWidget';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-  },
-}));
+export default function SimpleMenu() {
+  const [anchorEl, setAnchorEl] = React.useState(null);
 
-export default function ButtonAppBar() {
-  const classes = useStyles();
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static" style={{backgroundColor: "#1F9ECE", color:"black"}}>
-        <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" className={classes.title}>
-            <img src="/game.ico" height="75px"></img>
-          </Typography>
-          <CardWidget />
-        </Toolbar>
-      </AppBar>
+    <div className="navbar">
+      <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+        <img src="game.ico" alt="logo" height="50px"></img>
+        <p>MENU</p> 
+      </Button>
+      <CardWidget/>
+      <Menu
+        id="simple-menu"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+      >
+        <MenuItem onClick={handleClose}>Perfil</MenuItem>
+        <MenuItem onClick={handleClose}>Mi Cuenta</MenuItem>
+        <MenuItem onClick={handleClose}>Desconectarse</MenuItem>
+      </Menu>
     </div>
+    
   );
 }

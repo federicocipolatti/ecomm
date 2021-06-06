@@ -1,10 +1,11 @@
 import React from 'react';
 import  './ItemListContainerStyle.css';
 
-export const ItemListContainer = () => {
-    
+export const ItemListContainer = props => {
+    const { titulo, children } =props;
+
     return <div className = "listContainer">
-        <h2>PROXIMAMENTE</h2>
-        <img src="game.ico" height="150px"></img>
+        <h2>{titulo}</h2>
+        {children}
     </div>
 }
