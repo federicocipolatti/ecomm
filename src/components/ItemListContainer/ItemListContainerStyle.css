@@ -1,0 +1,9 @@
+.listContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: xx-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: left;
+    color: black;
+}
