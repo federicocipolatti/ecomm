@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import './Navbar.css';
-import { CardWidget } from '../CardWidget/CardWidget';
+import { CartWidget } from '../CartWidget/CartWidget';
 
 export default function SimpleMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -22,7 +22,7 @@ export default function SimpleMenu() {
         <img src="game.ico" alt="logo" height="50px"></img>
         <p>MENU</p> 
       </Button>
-      <CardWidget/>
+        <CartWidget/>
       <Menu
         id="simple-menu"
         anchorEl={anchorEl}

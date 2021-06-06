@@ -1,10 +1,10 @@
-.CardWidget{
+.CartWidget{
     color: black;
     display: flex;
     flex-direction: row-reverse;
     align-content: flex-start;
 }
 
-.CardWidget:hover{
+.CartWidget:hover{
     color: white;
 }

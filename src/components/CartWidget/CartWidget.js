@@ -1,9 +1,9 @@
 import React from 'react';
-import './CardWidgetStyle.css';
+import './CartWidgetStyle.css';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
-export const CardWidget = () => {
-    return <div className = "CardWidget">
+export const CartWidget = () => {
+    return <div className = "CartWidget">
         <ShoppingCartIcon />
     </div>
 }

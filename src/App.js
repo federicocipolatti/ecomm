@@ -12,7 +12,7 @@ const App = props => {
   <Navbar />
   <div className= "AppContainer">
     <ItemListContainer titulo="PROXIMAMENTE">
-      <img src="game.ico"></img>
+      <img src="game.ico" alt="logo"></img>
     </ItemListContainer>
   </div>
   </>
