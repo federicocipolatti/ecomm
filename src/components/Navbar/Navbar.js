@@ -19,7 +19,7 @@ export default function SimpleMenu() {
   return (
     <div className="navbar">
       <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-        <img src="game.ico" alt="logo" height="50px"></img>
+        <img src="img/game.ico" alt="logo" height="50px"></img>
         <p>MENU</p> 
       </Button>
         <CartWidget/>
