@@ -19,16 +19,21 @@ const useStyles = makeStyles({
 
 export const ItemCount = props => {
 
-  const {stock, cero} = props;
+  const stock = 10;
+  const minimo = 1;
 
-  const [num, setNum] = useState(1);
+  let [num, setNum] = useState(1);
 
   let handleIncrement = ()=> {
-      setNum(num+1); 
+    if (num < stock){
+      setNum(num+1);
+    } 
   }
 
   let handleDecrement = ()=> {
-    setNum(num-1);
+    if (num > minimo){
+      setNum(num-1);
+    }
   }
 
   const classes = useStyles();
