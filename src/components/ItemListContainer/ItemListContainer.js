@@ -1,11 +1,10 @@
 import React from 'react';
 import  './ItemListContainerStyle.css';
+import { ItemList } from '../ItemList/ItemList';
 
 export const ItemListContainer = props => {
-    const { titulo, children } =props;
 
     return <div className = "listContainer">
-        <h2>{titulo}</h2>
-        {children}
+        <ItemList/>
     </div>
 }

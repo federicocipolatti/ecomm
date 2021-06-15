@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography'
+import { PinDropRounded } from '@material-ui/icons';
 
 const useStyles = makeStyles({
   root: {
@@ -19,19 +20,16 @@ const useStyles = makeStyles({
 
 export const ItemCount = props => {
 
-  const stock = 10;
-  const minimo = 1;
-
   let [num, setNum] = useState(1);
 
   let handleIncrement = ()=> {
-    if (num < stock){
+    if (num < props.stock){
       setNum(num+1);
     } 
   }
 
   let handleDecrement = ()=> {
-    if (num > minimo){
+    if (num > props.minimo){
       setNum(num-1);
     }
   }
@@ -43,11 +41,11 @@ export const ItemCount = props => {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="/img/game.ico"
+          image={props.img}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            ¿Cuántos vas a llevar?
+            {props.titulo}
           </Typography>
           <Typography variant="body2" color="textPrimary" component="p">
             {
