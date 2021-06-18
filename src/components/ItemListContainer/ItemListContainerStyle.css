@@ -1,6 +1,7 @@
 .listContainer {
     display: flex;
-    width: 100%;
-    align-items: center;
+    flex-direction: wrap row;
+    margin: 30px;
+    align-items: space-around;
     justify-content: space-around;
 }
