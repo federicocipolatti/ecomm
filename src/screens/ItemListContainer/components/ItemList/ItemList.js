@@ -1,18 +1,17 @@
 import React from 'react';
-import { CardDetail } from '../CardDetail/CardDetail'
+import { Item } from '../ItemListContainer/components/Item/Item'
+import './ItemListStyle.css'
 
-export const ItemDetail = ({productos}) => {
+export const ItemList = ({productos}) => {
 
     return <>
         <div className='listContainer'>
             <div className='row'>
                 {productos.map(item => (
                     <div className='col-md-4' key={item.id}>
-                        <CardDetail titulo={item.titulo} 
+                        <Item titulo={item.titulo} 
                         subtitulo={item.subtitulo} 
-                        img={item.img}
-                        detalle={item.detalle}/>
-                        
+                        img={item.img}/>
                     </div>   
                     ))
                 }

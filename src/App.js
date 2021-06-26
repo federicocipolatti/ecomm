@@ -1,7 +1,7 @@
 import React from "react";
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
+import { ItemDetailContainer } from './screens/ItemDetailContainer/ItemDetailContainer.jsx';
 
 
 const App = () =>{
