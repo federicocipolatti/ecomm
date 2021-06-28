@@ -1,40 +1,32 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
 import './Navbar.css';
-import { CartWidget } from '../CartWidget/CartWidget';
+import { Link, useHistory } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default function SimpleMenu() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+export const Navbar = () => {
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+  const par= "par";
+  const impar= "impar";
 
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
-  return (
-    <div className="navbar">
-      <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-        <img src="img/game.ico" alt="logo" height="50px"></img>
-        <p>MENU</p> 
-      </Button>
-        <CartWidget/>
-      <Menu
-        id="simple-menu"
-        anchorEl={anchorEl}
-        keepMounted
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-      >
-        <MenuItem onClick={handleClose}>Perfil</MenuItem>
-        <MenuItem onClick={handleClose}>Mi Cuenta</MenuItem>
-        <MenuItem onClick={handleClose}>Desconectarse</MenuItem>
-      </Menu>
-    </div>
-    
-  );
+  const history = useHistory();
+ 
+  return <>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <Link className="navbar-brand" to={'/'}><img src='/img/game.ico' className='imgbar'/></Link>
+    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarNav">
+    <ul className="navbar-nav">
+      <li className="nav-item active">
+        <button type="button" className="btn btn-light" onClick={()=> history.push(`/category/${par}`)}>Productos Pares</button>
+      </li>
+      <li className="nav-item">
+        <button type="button" className="btn btn-light" onClick={()=> history.push(`/category/${impar}`)}>Productos Impares</button>
+      </li>
+    </ul>
+  </div>
+    <button type="button" className="btn btn-light cart"><img src="https://img.icons8.com/glyph-neue/64/000000/add-shopping-cart.png"/></button>
+  </nav>
+  </>
 }

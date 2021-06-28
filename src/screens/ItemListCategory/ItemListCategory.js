@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import  './ItemListContainerStyle.css';
-import { ItemList } from './components/ItemList/ItemList';
+import  './ItemListCategory.css';
+import { ItemList } from '../ItemListContainer/components/ItemList/ItemList';
+import { useParams } from 'react-router-dom';
 
 const promiseContainer = () => {
 
@@ -65,24 +66,31 @@ const promiseContainer = () => {
     })
 }
 
-export const ItemListContainer = () => { 
-    
+export const ItemListCategory = () => { 
+
     const [productos, setProductos] = useState([]); 
+    const {categoryID} = useParams();
 
     const cambioData = () => {
         promiseContainer().then(data => {
-            const dataNew = data.filter(element => element.mostrar)
-            setProductos(dataNew)
-        })
+            const dataNew = data.filter(element => element.category === categoryID);
+            setProductos(dataNew);
+        });
     }
 
     useEffect(() => {
         cambioData();
-    },[])
+    },[categoryID])
 
-    return <div className='listContainer'>
-        {productos.length === 0 ? (<h1>Cargando...</h1>) : (  
+    return <>
+    <div className='listContainer'>
+        {productos.length === 0 ? (<h1>Cargando Productos</h1>) : (  
         <ItemList productos={productos}/>   
         )}
+        
     </div>
+    <div className='volver'>
+        <button className='btn btn-outline-dark rounded-0'>VOLVER</button>
+    </div>
+    </>
 }

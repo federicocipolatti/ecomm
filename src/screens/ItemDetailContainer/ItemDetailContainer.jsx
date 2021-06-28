@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ItemDetail } from './components/ItemDetail/ItemDetail.jsx';
 
-const promiseContainer = () => {
+/* const promiseContainer = () => {
 
     return new Promise ((resolve, reject) => {
         setTimeout(() => resolve(
@@ -62,26 +62,36 @@ const promiseContainer = () => {
             ]
         ), 2000);
     })
-}
+} */
 
-export const ItemDetailContainer = () => { 
+export const ItemDetailContainer = ({productos}) => { 
 
-    const [productos, setProductos] = useState([]); 
+    
 
-    const cambioData = () => {
+    // const [productos, setProductos] = useState([]); 
+
+    /* const cambioData = () => {
         promiseContainer().then(data => {
             const dataNew = data.filter(element => element.mostrar)
             setProductos(dataNew)
         })
-    }
+    } */
 
-    useEffect(() => {
+    /* useEffect(() => {
         cambioData();
-    },[])
+    },[]) */
 
     return <div className="detailContainer">
-        {productos.length === 0 ? (<h1>Cargando...</h1>) : (  
+        {/* {productos.length === 0 ? (<h1>Cargando...</h1>) : (  
         <ItemDetail productos={productos}/>   
-        )}
-    </div>
+        )} */}
+        {productos.map(item => (
+        <div className='col-md-4' key={item.id}>
+            <ItemDetail titulo={item.titulo} 
+            subtitulo={item.subtitulo} 
+            img={item.img}/>
+        </div>   
+        ))
+        }
+        </div>
 }

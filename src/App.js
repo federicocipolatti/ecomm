@@ -1,15 +1,16 @@
 import React from "react";
 import './App.css';
-import Navbar from './components/Navbar/Navbar';
-import { ItemDetailContainer } from './screens/ItemDetailContainer/ItemDetailContainer.jsx';
-
+import { Navbar } from './components/Navbar/Navbar';
+import { ItemListContainer } from './screens/ItemListContainer/ItemListContainer';
+import { Router } from './components/Router/Router';
+import { BrowserRouter } from 'react-router-dom';
 
 const App = () =>{
-  return <>
-    <Navbar />
-    <div className= "AppContainer">
-      <ItemDetailContainer />
-    </div>
+  return <> 
+    <BrowserRouter>
+      <Navbar/>
+      <Router/>
+    </BrowserRouter>
   </>
 }
 

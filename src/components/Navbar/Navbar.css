@@ -3,5 +3,21 @@
     color: black;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+}
+
+.imgbar{
+    margin-left: 5px;
+    width: 75px;
+}
+
+.btn{
+    margin: 5px;
+}
+
+.cart{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 10px;
 }
