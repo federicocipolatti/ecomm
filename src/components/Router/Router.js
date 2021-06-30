@@ -1,12 +1,11 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import { ItemListContainer } from '../../screens/ItemListContainer/ItemListContainer';
 import { ItemDetailContainer } from '../../screens/ItemDetailContainer/ItemDetailContainer';
 import { ItemListCategory } from '../../screens/ItemListCategory/ItemListCategory'
 
 export const Router = () => {
-    return <>
-    <BrowserRouter>
+    return (
         <Switch>
             <Route exact path="/">
                 <ItemListContainer/>
@@ -14,10 +13,9 @@ export const Router = () => {
             <Route path="/category/:categoryID">
                 <ItemListCategory/>
             </Route>
-            <Route path="/detail/detailID>">
+            <Route path="/detail/:detailID>">
                 <ItemDetailContainer/>
-            </Route>
+            </Route> 
         </Switch>
-    </BrowserRouter>
-    </>
+    )
 }

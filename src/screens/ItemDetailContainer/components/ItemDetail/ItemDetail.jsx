@@ -1,23 +1,23 @@
 import React from 'react';
-import { CardDetail } from '../CardDetail/CardDetail.jsx'
 import './ItemDetailStyle.css'
 
-export const ItemDetail = ({productos}) => {
+export const ItemDetail = ({info}) => {
 
-    return <>
-        <div className='listContainer'>
-            <div>
-                {productos.map(item => (
-                    <div key={item.id}>
-                        <CardDetail titulo={item.titulo} 
-                        subtitulo={item.subtitulo} 
-                        img={item.img}
-                        detalle={item.detalle}/>
-                        
-                    </div>   
+    return (
+        <div className='listDetailContainer'>
+            <div className='row rowDetail'>
+                {info.map(item => (
+                    <div className='cardDetail text-center bg-light border-dark'>
+                    <img className='imgDetail' src = {item.img} alt='logo'></img>
+                    <div className='card-bodyDetail'>
+                      <h3 className='card-titleDetail'>{item.titulo}</h3>
+                      <p className='card-subtitleDetail text-secondary'>{item.subtitulo}</p>
+                      <button className='btnDetail btn-outline-dark rounded-0'>DETALLES</button>
+                    </div>     
+                  </div>   
                     ))
                 }
             </div> 
         </div>
-    </>
+    )
 }

@@ -80,9 +80,9 @@ export const ItemListContainer = () => {
         cambioData();
     },[])
 
-    return <div className='listContainer'>
+    return <>
         {productos.length === 0 ? (<h1>Cargando...</h1>) : (  
         <ItemList productos={productos}/>   
         )}
-    </div>
+    </>
 }

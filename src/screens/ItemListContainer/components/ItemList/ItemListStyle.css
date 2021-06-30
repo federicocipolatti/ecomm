@@ -3,8 +3,11 @@
     flex-direction: wrap row;
     align-items: space-around;
     justify-content: space-around;
-    margin-right: 30px;
-    margin-left: 30px;
     margin-top: 30px;
-    width: 100%;
+}
+
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

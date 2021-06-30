@@ -1,4 +1,43 @@
-.listContainer{
+.listDetailContainer {
     display: flex;
+    flex-direction: wrap row;
+    align-items: space-around;
+    justify-content: space-around;
+    margin-top: 30px;
+    height: 98vh;
+}
+
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardDetail{
     width: 100%;
+}
+
+.rowDetail{
+    width: 75%;
+    height: 75%;
+}
+
+.imgDetail{
+    width: 30%;
+}
+
+.card-bodyDetail{
+    width: 100%;
+}
+
+.card-titleDetail{
+    font-size: 100px;
+}
+
+.card-subtitleDetail{
+    font-size: 80px;
+}
+
+.btnDetail{
+    margin-top: 50px;
 }

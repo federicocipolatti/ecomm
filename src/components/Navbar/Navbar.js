@@ -10,7 +10,7 @@ export const Navbar = () => {
 
   const history = useHistory();
  
-  return <>
+  return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link className="navbar-brand" to={'/'}><img src='/img/game.ico' className='imgbar'/></Link>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,5 +28,5 @@ export const Navbar = () => {
   </div>
     <button type="button" className="btn btn-light cart"><img src="https://img.icons8.com/glyph-neue/64/000000/add-shopping-cart.png"/></button>
   </nav>
-  </>
+  )
 }

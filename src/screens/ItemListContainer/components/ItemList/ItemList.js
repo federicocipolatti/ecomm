@@ -4,11 +4,11 @@ import './ItemListStyle.css'
 
 export const ItemList = ({productos}) => {
 
-    return <>
+    return (
         <div className='listContainer'>
             <div className='row'>
                 {productos.map(item => (
-                    <div className='col-md-4' key={item.id}>
+                    <div className='col-md-4 item' key={item.id}>
                         <Item titulo={item.titulo} 
                         subtitulo={item.subtitulo} 
                         img={item.img}/>
@@ -17,5 +17,5 @@ export const ItemList = ({productos}) => {
                 }
             </div> 
         </div>
-    </>
+    )
 }

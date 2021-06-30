@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import  './ItemListCategory.css';
 import { ItemList } from '../ItemListContainer/components/ItemList/ItemList';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 const promiseContainer = () => {
 
@@ -83,14 +83,14 @@ export const ItemListCategory = () => {
     },[categoryID])
 
     return <>
-    <div className='listContainer'>
+   
         {productos.length === 0 ? (<h1>Cargando Productos</h1>) : (  
         <ItemList productos={productos}/>   
         )}
         
-    </div>
+    
     <div className='volver'>
-        <button className='btn btn-outline-dark rounded-0'>VOLVER</button>
+       <Link><button className='btn btn-outline-dark rounded-0' to={'/'}>VOLVER</button></Link>
     </div>
     </>
 }
