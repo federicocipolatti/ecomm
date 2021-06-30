@@ -13,7 +13,7 @@ export const Router = () => {
             <Route path="/category/:categoryID">
                 <ItemListCategory/>
             </Route>
-            <Route path="/detail/:detailID>">
+            <Route path="/detail">
                 <ItemDetailContainer/>
             </Route> 
         </Switch>

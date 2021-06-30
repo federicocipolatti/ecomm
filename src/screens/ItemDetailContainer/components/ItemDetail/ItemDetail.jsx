@@ -12,7 +12,7 @@ export const ItemDetail = ({info}) => {
                     <div className='card-bodyDetail'>
                       <h3 className='card-titleDetail'>{item.titulo}</h3>
                       <p className='card-subtitleDetail text-secondary'>{item.subtitulo}</p>
-                      <button className='btnDetail btn-outline-dark rounded-0'>DETALLES</button>
+                      <button className='btnDetail btn-outline-dark rounded-0'>AGREGAR AL CARRITO</button>
                     </div>     
                   </div>   
                     ))

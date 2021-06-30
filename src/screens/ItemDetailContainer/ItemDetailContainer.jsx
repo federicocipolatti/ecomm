@@ -3,8 +3,8 @@ import { ItemDetail } from './components/ItemDetail/ItemDetail.jsx';
 const data = [
     {
         id: '1',
-        titulo: 'Producto 1',
-        subtitulo: 'Hola soy el producto 1',
+        titulo: 'Producto',
+        subtitulo: 'Hola soy el producto',
         img: '/img/game.ico',
         mostrar: true,
         category: 'impar'
