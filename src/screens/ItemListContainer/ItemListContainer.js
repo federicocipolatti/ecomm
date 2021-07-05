@@ -13,7 +13,8 @@ const promiseContainer = () => {
                     subtitulo: 'Hola soy el producto 1',
                     img: '/img/game.ico',
                     mostrar: true,
-                    category: 'impar'
+                    category: 'impar',
+                    precio: '$1000,00'
                 },
             
                 {
@@ -22,7 +23,8 @@ const promiseContainer = () => {
                     subtitulo: 'Hola soy el producto 2',
                     img: '/img/game.ico',
                     mostrar: true,
-                    category: 'par'
+                    category: 'par',
+                    precio: '$1200,00'
                 },
             
                 {
@@ -31,7 +33,8 @@ const promiseContainer = () => {
                     subtitulo: 'Hola soy el producto 3',
                     img: '/img/game.ico',
                     mostrar: true,
-                    category: 'impar'
+                    category: 'impar',
+                    precio: '$1500,00'
                 },
 
                 {
@@ -40,7 +43,8 @@ const promiseContainer = () => {
                     subtitulo: 'Hola soy el producto 4',
                     img: '/img/game.ico',
                     mostrar: true,
-                    category: 'par'
+                    category: 'par',
+                    precio: '$2000,00'
                 },
 
                 {
@@ -49,7 +53,8 @@ const promiseContainer = () => {
                     subtitulo: 'Hola soy el producto 5',
                     img: '/img/game.ico',
                     mostrar: true,
-                    category: 'impar'
+                    category: 'impar',
+                    precio: '$2400,00'
                 },
 
                 {
@@ -58,7 +63,8 @@ const promiseContainer = () => {
                     subtitulo: 'Hola soy el producto 6',
                     img: '/img/game.ico',
                     mostrar: true,
-                    category: 'par'
+                    category: 'par',
+                    precio: '$3500,00'
                 }
             ]
         ), 2000);

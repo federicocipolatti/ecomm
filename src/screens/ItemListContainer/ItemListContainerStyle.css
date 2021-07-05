@@ -1,4 +1,5 @@
 .listContainer {
+    min-height: 83vh;
     display: flex;
     flex-direction: wrap row;
     align-items: space-around;

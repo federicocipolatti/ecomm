@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import { ItemListContainer } from '../../screens/ItemListContainer/ItemListContainer';
 import { ItemDetailContainer } from '../../screens/ItemDetailContainer/ItemDetailContainer';
 import { ItemListCategory } from '../../screens/ItemListCategory/ItemListCategory'
+import { Cart } from '../../screens/Cart/Cart';
 
 export const Router = () => {
     return (
@@ -15,6 +16,9 @@ export const Router = () => {
             </Route>
             <Route path="/detail">
                 <ItemDetailContainer/>
+            </Route>
+            <Route path="/cart">
+                <Cart/>
             </Route> 
         </Switch>
     )

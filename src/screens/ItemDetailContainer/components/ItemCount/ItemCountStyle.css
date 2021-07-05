@@ -1,0 +1,13 @@
+.botones{
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 40px;
+}
+
+.itemCount{
+    display: flex;
+    justify-content: center;
+}

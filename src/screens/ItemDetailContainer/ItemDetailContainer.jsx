@@ -7,7 +7,8 @@ const data = [
         subtitulo: 'Hola soy el producto',
         img: '/img/game.ico',
         mostrar: true,
-        category: 'impar'
+        category: 'impar',
+        precio: '$1500'
     }
 ];
   
