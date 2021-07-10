@@ -14,7 +14,7 @@ export const Router = () => {
             <Route path="/category/:categoryID">
                 <ItemListCategory/>
             </Route>
-            <Route path="/detail/:itemID">
+            <Route path="/item/:itemID">
                 <ItemDetailContainer/>
             </Route>
             <Route path="/cart">

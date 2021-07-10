@@ -75,11 +75,11 @@ const promiseContainer = () => {
 export const ItemDetailContainer = () => { 
 
     const [item, setItem] = useState([]); 
-    const { itemID } = useParams();
+    const {itemID} = useParams();
 
     const cambioData = () => {
         promiseContainer().then(data => {
-            const dataNew = data.filter(element => element.item === itemID);
+            const dataNew = data.filter(element => element.id === itemID);
             setItem(dataNew);
         });
     }
