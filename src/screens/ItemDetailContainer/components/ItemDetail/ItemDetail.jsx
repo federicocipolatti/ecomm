@@ -2,12 +2,12 @@ import React from 'react';
 import { ItemCount } from '../ItemCount/ItemCount';
 import './ItemDetailStyle.css';
 
-export const ItemDetail = ({info}) => {
+export const ItemDetail = ({item}) => {
 
     return (
         <div className='listDetailContainer'>
             <div className='flex-row rowDetail'>
-                {info.map(item => (
+                {item.map(item => (
                     <div className='cardDetail text-center border-dark'>
                     <img className='imgDetail' src = {item.img} alt='logo'></img>
                     <div className='card-bodyDetail'>

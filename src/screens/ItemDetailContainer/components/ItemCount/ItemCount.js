@@ -1,50 +1,65 @@
 import React, { useState } from 'react';
-import './ItemCountStyle.css';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography'
+import { PinDropRounded } from '@material-ui/icons';
 
-const ShowMessage = props => {
-  return <h4>{`¿Cuántos vas a llevar? ${props.stock}`}</h4>
-}
-
-const ButtonComponent = ({ changeStock, stock }) => {
-  return <>
-    <div className='itemCount'>
-      <button className='botones btn-outline-dark rounded-0' onClick={() => changeStock(stock - 1)}> -1</button>
-      <button className='botones btn-outline-dark rounded-0' onClick={() => changeStock(stock + 1)}> +1 </button>
-    </div>
-    <button disabled={stock<=0} type='submit' className='btnDetail btn-outline-dark rounded-0'>AGREGAR AL CARRITO</button>
-  </>
-}
-
-const finalizarCompra = () => {
-  return <button type='submit' className='btn-outline-dark rounded-0'>FINALIZAR COMPRA</button>
-}
-
-const StockContainer = ({ componente: ComponenteCustomizado }) => {
-  const [stock, setStock] = useState(1);
-
-  const handleStock = value => setStock(value);
-
-  return <div>
-    <ShowMessage stock={stock} />
-    <ComponenteCustomizado stock={stock} changeStock={handleStock} />
-  </div>
-}
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 345,
+  },
+  media: {
+    height: 140,
+  },
+});
 
 export const ItemCount = props => {
 
-  const [button, setButton] = useState('');
+  let [num, setNum] = useState(1);
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    console.log('cambio de boton');
+  let handleIncrement = ()=> {
+    if (num < props.stock){
+      setNum(num+1);
+    } 
   }
 
-  const handleChange = e => {
-    setButton(e.target.value)
+  let handleDecrement = ()=> {
+    if (num > props.minimo){
+      setNum(num-1);
+    }
   }
 
-  return <form onSubmit={handleSubmit}>
-    <StockContainer componente={ButtonComponent} onChange={handleChange} value={button}/>
-  </form>
-  
+  return (
+    <Card className={classes.root}>
+      <CardActionArea>
+        <CardMedia
+          className={classes.media}
+          image={props.img}
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            {props.titulo}
+          </Typography>
+          <Typography variant="body2" color="textPrimary" component="p">
+            {
+              num
+            }
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <Button onClick={handleDecrement} size="large" color="secondary">
+          MENOS
+        </Button>
+        <Button onClick={handleIncrement} size="large" color="primary">
+          MÁS
+        </Button>
+      </CardActions>
+    </Card>
+  );
 }

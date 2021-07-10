@@ -9,10 +9,7 @@ export const ItemList = ({productos}) => {
             <div className='row'>
                 {productos.map(item => (
                     <div className='col-md-4 item' key={item.id}>
-                        <Item titulo={item.titulo} 
-                        subtitulo={item.subtitulo} 
-                        img={item.img}
-                        precio={item.precio}/>
+                        <Item item={item}/>
                     </div>   
                     ))
                 }
