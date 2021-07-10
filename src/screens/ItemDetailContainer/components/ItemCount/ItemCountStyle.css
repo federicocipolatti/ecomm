@@ -1,4 +1,4 @@
-.botones{
+.buttons{
     display: flex;
     margin: 10px;
     justify-content: center;
@@ -7,7 +7,7 @@
     height: 40px;
 }
 
-.itemCount{
+.count{
     display: flex;
     justify-content: center;
 }
