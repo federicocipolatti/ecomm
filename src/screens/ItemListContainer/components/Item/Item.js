@@ -4,6 +4,8 @@ import { useHistory } from 'react-router-dom';
 
 export const Item = ({item}) => {
 
+  const itemID = "itemID";
+
   const history = useHistory();
 
   return <div className='card text-center border-dark'>
@@ -12,7 +14,7 @@ export const Item = ({item}) => {
       <h3 className='card-title'>{item.titulo}</h3>
       <p className='card-subtitle text-secondary'>{item.subtitulo}</p>
       <p className='card-subtitle text-primary'>{item.precio}</p>
-      <button className='btn btn-light btn-outline-dark rounded-0' onClick={()=> history.push(`/item/:itemID`)}>DETALLES</button>
+      <button className='btn btn-light btn-outline-dark rounded-0' onClick={()=> history.push(`/item/${itemID}`)}>DETALLES</button>
     </div>     
   </div>
 }
