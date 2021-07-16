@@ -1,51 +1,8 @@
-.listDetailContainer {
-    display: flex;
-    flex-direction: wrap row;
-    align-items: space-around;
-    justify-content: space-around;
-    margin-top: 30px;
-}
-
-.item{
+.Detail{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.cardDetail{
-    width: 100%;;
-}
-
-.rowDetail{
-    width: 75%;
-    height: 85%;
-    background: lightblue;
-    border: solid black 2px;
-    padding: 10px;
-}
-
-.imgDetail{
-    width: 25%;
-}
-
-.card-bodyDetail{
+    margin-top: 50px;
     width: 100%;
-}
-
-.card-titleDetail{
-    font-size: 90px;
-}
-
-.card-subtitleDetail{
-    font-size: 70px;
-}
-
-.btnDetail{
-    margin-top: 30px;
-    font-size: 25px;
-}
-
-.adCart{
-    display: flex;
-    justify-content: center;
+    min-height: 80vh;
 }

@@ -79,7 +79,7 @@ export const ItemDetailContainer = () => {
 
     const cambioData = () => {
         promiseContainer().then(data => {
-            const dataNew = data.filter(element => element.id);
+            const dataNew = data.filter(element => element.id === itemID);
             setDetail(dataNew);
         });
     }
@@ -88,12 +88,8 @@ export const ItemDetailContainer = () => {
         cambioData();
     },[itemID])
 
-    return <>
-        
-        {detail.length === 0 ? (<h1>Cargando...</h1>) : (  
-        <ItemDetail detail={detail}/>   
-        )}
-         
+    return <>   
+        <ItemDetail detail={detail}/>         
     </>
        
 }
