@@ -1,8 +1,8 @@
 import React from 'react';
-import './ItemStyle.css';
+//import './ItemStyle.css';
 import { useHistory } from 'react-router-dom';
 
-export const Item = ({item}) => {
+export const ItemDetailItem = ({item}) => {
 
   const history = useHistory();
 

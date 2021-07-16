@@ -75,6 +75,7 @@ const promiseContainer = () => {
 export const ItemDetailContainer = () => { 
 
     const [detail, setDetail] = useState([]); 
+    const {itemID} = useParams();
 
     const cambioData = () => {
         promiseContainer().then(data => {
@@ -85,7 +86,7 @@ export const ItemDetailContainer = () => {
 
     useEffect(() => {
         cambioData();
-    },[])
+    },[itemID])
 
     return <>
         
