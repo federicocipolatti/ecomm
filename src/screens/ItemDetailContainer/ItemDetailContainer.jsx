@@ -74,24 +74,23 @@ const promiseContainer = () => {
 
 export const ItemDetailContainer = () => { 
 
-    const [item, setItem] = useState([]); 
-    const {itemID} = useParams();
+    const [detail, setDetail] = useState([]); 
 
     const cambioData = () => {
         promiseContainer().then(data => {
-            const dataNew = data.filter(element => element.id === itemID);
-            setItem(dataNew);
+            const dataNew = data.filter(element => element.id);
+            setDetail(dataNew);
         });
     }
 
     useEffect(() => {
         cambioData();
-    },[itemID])
+    },[])
 
     return <>
         
-        {item.length === 0 ? (<h1>Cargando...</h1>) : (  
-        <ItemDetail item={item}/>   
+        {detail.length === 0 ? (<h1>Cargando...</h1>) : (  
+        <ItemDetail detail={detail}/>   
         )}
          
     </>

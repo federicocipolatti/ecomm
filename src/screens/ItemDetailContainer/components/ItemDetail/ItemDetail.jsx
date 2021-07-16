@@ -3,14 +3,14 @@ import { ItemCount } from '../ItemCount/ItemCount';
 import './ItemDetailStyle.css';
 import { Item } from '../../../ItemListContainer/components/Item/Item';
 
-export const ItemDetail = ({item}) => {
+export const ItemDetail = ({detail}) => {
 
     return (
         <div className='listContainer'>
             <div className='row'>
-                {item.map(detail => (
-                    <div className='col-md-4 item' key={detail.id}>
-                        <Item detail={detail}/>
+                {detail.map(detailID => (
+                    <div className='col-md-4 item' key={detailID.id}>
+                        <Item detail={detailID}/>
                     </div>   
                     ))
                 }
