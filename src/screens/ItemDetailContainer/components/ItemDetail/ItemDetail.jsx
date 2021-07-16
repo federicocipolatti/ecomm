@@ -1,6 +1,6 @@
 import React from 'react';
 import { ItemCount } from '../ItemCount/ItemCount';
-//import './ItemDetailStyle.css';
+//import './ItemDetailItemStyle.css';
 import { ItemDetailItem } from '../../ItemDetailItem/ItemDetailItem';
 
 export const ItemDetail = ({detail}) => {
@@ -14,8 +14,7 @@ export const ItemDetail = ({detail}) => {
                     </div>   
                     ))
                 }
-            </div> 
-        <ItemCount/>    
+            </div>   
         </div>
     )
 }
