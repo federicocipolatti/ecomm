@@ -10,9 +10,5 @@
 .count{
     display: flex;
     justify-content: center;
-}
-
-.num{
-    display: flex;
-    justify-content: center;
+    align-items: center;
 }

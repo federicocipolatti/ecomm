@@ -1,6 +1,6 @@
 import React from 'react';
 import './ItemDetailItemStyle.css';
-import { ItemCount } from '../components/ItemCount/ItemCount';
+import { ItemCount } from '../ItemCount/ItemCount';
 
 export const ItemDetailItem = ({item}) => {
 
@@ -18,6 +18,6 @@ export const ItemDetailItem = ({item}) => {
     </div>
   </div>
     <ItemCount/>
-    <button className='btnDetail btn-light btn-outline-dark rounded-0'>AÑADIR AL CARRITO</button>
+    
 </div>
 }
