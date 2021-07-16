@@ -20,8 +20,8 @@ export const ItemCount = props => {
     <div className='count'>
       {num}
       <div className='buttons'>
-        <button className='btn btn-light btn-outline-dark rounded-0' onClick={handleDecrement}></button>
-        <button className='btn btn-light btn-outline-dark rounded-0' onClick={handleIncrement}></button>
+        <button className='btn btn-light btn-outline-dark rounded-0' onClick={handleDecrement}>-1</button>
+        <button className='btn btn-light btn-outline-dark rounded-0' onClick={handleIncrement}>+1</button>
       </div>
     </div>
   )

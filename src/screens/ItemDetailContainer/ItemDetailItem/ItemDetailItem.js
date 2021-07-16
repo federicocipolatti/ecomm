@@ -12,5 +12,6 @@ export const ItemDetailItem = ({item}) => {
       <p className='card-subtitle text-primary'>{item.precio}</p>
     </div>    
     <ItemCount/>
+    <button className='btn btn-light btn-outline-dark rounded-0'>AÑADIR AL CARRITO</button>
   </div>
 }
